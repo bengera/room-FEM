@@ -1,34 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <title>Frontend Mentor | Room homepage</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
-  Homes
-  Shop
-  About
-  Contact
+  <div class="container">
 
-  Discover innovative ways to decorate
+   
 
-  We provide unmatched quality, comfort, and style for property owners across the country. 
-  Our experts combine form and function in bringing your vision to life. Create a room in your 
-  own style with our collection and make your property a reflection of you and what you love.
+        <nav class="navigation">
+          
+          <ul class="navigation__list">
+            <img src="img/logo.svg" alt="logo" class="logo">
+            <li class="navigation__item"><a href="#" class="navigation__link"></a>home</li>
+            <li class="navigation__item"><a href="#" class="navigation__link"></a>shop</li>
+            <li class="navigation__item"><a href="#" class="navigation__link"></a>about</li>
+            <li class="navigation__item"><a href="#" class="navigation__link"></a>contact</li>
 
-  Shop now
+          </ul>
+        </nav>
+        <div class="t-content">
+          <div class="t-content__t-container">
+          <h1 class="t-content__main-title">Discover innovative ways to decorate</h1>
+          <p class="t-content__p">
+            We provide unmatched quality, comfort, and style for property owners across the country.
+            Our experts combine form and function in bringing your vision to life. Create a room in your
+            own style with our collection and make your property a reflection of you and what you love.
+          </p>
+          
+          <button class="t-content__btn-shop">Shop now<img src="img/icon-arrow.svg" alt="logo" class="arrow"></button>
+        </div>
+        </div>
 
-  We are available all across the globe
+
+
+
+
+
+        <!-- We are available all across the globe
 
   With stores all over the world, it's easy for you to find furniture for your home or place of business. 
   Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
@@ -49,11 +81,14 @@
   Our multifunctional collection blends design and function to suit your individual taste.
   Make each room unique, or pick a cohesive theme that best express your interests and what
   inspires you. Find the furniture pieces you need, from traditional to contemporary styles
-  or anything in between. Product specialists are available to help you create your dream space.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  or anything in between. Product specialists are available to help you create your dream space. -->
+
+        <div class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+          Coded by <a href="https://github.com/bengera">Ben Geraghty</a>.
+        </div>
   </div>
+  <!--container end-->
 </body>
+
 </html>

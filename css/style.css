@@ -1,2 +1,77 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
 body {
-  background-color: #242469; }
+  font-family: "Spartan", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  overflow-x: hidden; }
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 2fr 1fr min-content;
+  margin: 0 auto 0 auto; }
+
+.logo {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  height: 20px; }
+
+.arrow {
+  margin-left: 4rem;
+  cursor: pointer; }
+
+.navigation {
+  background: url("/img/desktop-image-hero-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-column: 1 / 8;
+  grid-row: 1 / 1; }
+  .navigation__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+    padding: 1rem;
+    margin-top: 5rem;
+    cursor: pointer;
+    color: white; }
+
+.t-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 0 auto;
+  grid-column: 8 / -1;
+  width: 65%; }
+  .t-content__main-title {
+    line-height: 48px;
+    letter-spacing: -0.029em;
+    font-size: 4.2rem;
+    margin-bottom: 2.5rem; }
+  .t-content__p {
+    color: #a1a1a1;
+    margin-bottom: 1.5rem; }
+  .t-content__btn-shop {
+    font-size: 18px;
+    border: 0;
+    background-color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1.1rem;
+    cursor: pointer; }
+
+.attribution {
+  grid-row: 6 / 8;
+  grid-column: 6 / 8; }
