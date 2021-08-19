@@ -39,7 +39,7 @@ html {
   font-size: 62.5%;
 
   @media only screen and (max-width: $bp-large) {
-    // font-size: 50%;
+    font-size: 50%;
   }
 
   @media only screen and (max-width: $bp-medium) {
@@ -71,8 +71,11 @@ body {
   display: grid;
   grid-template-columns: repeat(7, 1fr) min-content repeat(4,1fr);
   grid-template-rows: 2fr 8.5rem 1fr;
-  // border: 1px solid black;
   margin: 0 auto 0 auto;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
 
 }
 
@@ -246,7 +249,7 @@ body {
 .furniture {
   display: flex;
   flex-direction: column;
-  padding: 5rem;
+  padding: 7rem;
   margin: 0 auto 0 auto;
 
   &__secondary-title {
