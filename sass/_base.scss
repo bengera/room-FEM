@@ -126,7 +126,9 @@ body {
 
     @media only screen and (max-width: $bp-large) {
       justify-content: center;
-      width: 100%;
+      width: 100px;
+      margin-left: 19rem;
+      
     }
 
 
@@ -408,30 +410,30 @@ body {
 
 //MOBILE
 
-.mobile-nav {
-  display: none;
+// .mobile-nav {
+//   display: none;
 
-  @media only screen and (max-width: $bp-large) {
-    display: block;
-    position: fixed;
-    cursor: pointer;
-    left: 5%;
-    top: 5%;
-    z-index: 6;
-  }
+//   @media only screen and (max-width: $bp-large) {
+//     display: block;
+//     position: fixed;
+//     cursor: pointer;
+//     left: 5%;
+//     top: 5%;
+//     z-index: 6;
+//   }
 
-  .line {
-    width: 30px;
-    height: 3px;
-    background: white;
-    margin: 5px;
+//   .line {
+//     width: 30px;
+//     height: 3px;
+//     background: white;
+//     margin: 5px;
 
-  }
-}
+//   }
+// }
 
 .scroll-btn-mobile-container {
   
-
+  display: none;
   @media only screen and (max-width: $bp-large) {
     grid-column: 10 / -1;
     grid-row: 1 / 1;
@@ -440,9 +442,75 @@ body {
     position: absolute;
     bottom: 0;
     right: 0;
+    
+    
   }
 }
 
+.menu-btn {
+  
+  @media only screen and (max-width: $bp-large) {
+    
+    position: absolute;
+    // position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    top: 13%;
+    left: 5%;
+    
+    
+    &__burger {
+      width: 40px;
+      height: 6px;
+      background: #fff;
+      border-radius: 5px;
+      transition: all .5s ease-in-out;
+      
+      &:before,
+      &:after
+      {
+       content: '';
+      position: absolute;
+      width: 40px;
+      height: 6px;
+      background: #fff;
+      border-radius: 5px;
+      transition: all .5s ease-in-out; 
+      }
+      
+      &:before {
+        transform: translateY(-16px);
+      }
+      
+      &:after {
+        transform: translateY(16px);
+      }
+      
+      
+    }
+  }
+
+  
+}
+
+/* ANIMATION */
+.menu-btn.open .menu-btn__burger {
+  transform: translatex(-50px);
+  background: transparent;
+  
+}
+
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
 
 
 

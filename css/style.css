@@ -64,7 +64,8 @@ body {
     @media only screen and (max-width: 62.5em) {
       .navigation__list {
         justify-content: center;
-        width: 100%; } }
+        width: 100px;
+        margin-left: 19rem; } }
   .navigation__item:hover {
     border-bottom: 2px solid white; }
   @media only screen and (max-width: 62.5em) {
@@ -213,31 +214,57 @@ body {
       .furniture__p {
         width: 90%; } }
 
-.mobile-nav {
+.scroll-btn-mobile-container {
   display: none; }
   @media only screen and (max-width: 62.5em) {
-    .mobile-nav {
-      display: block;
-      position: fixed;
-      cursor: pointer;
-      left: 5%;
-      top: 5%;
-      z-index: 6; } }
-  .mobile-nav .line {
-    width: 30px;
-    height: 3px;
-    background: white;
-    margin: 5px; }
+    .scroll-btn-mobile-container {
+      grid-column: 10 / -1;
+      grid-row: 1 / 1;
+      z-index: 999;
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      right: 0; } }
 
 @media only screen and (max-width: 62.5em) {
-  .scroll-btn-mobile-container {
-    grid-column: 10 / -1;
-    grid-row: 1 / 1;
-    z-index: 999;
-    display: flex;
+  .menu-btn {
     position: absolute;
-    bottom: 0;
-    right: 0; } }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    top: 13%;
+    left: 5%; }
+    .menu-btn__burger {
+      width: 40px;
+      height: 6px;
+      background: #fff;
+      border-radius: 5px;
+      transition: all .5s ease-in-out; }
+      .menu-btn__burger:before, .menu-btn__burger:after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 6px;
+        background: #fff;
+        border-radius: 5px;
+        transition: all .5s ease-in-out; }
+      .menu-btn__burger:before {
+        transform: translateY(-16px); }
+      .menu-btn__burger:after {
+        transform: translateY(16px); } }
+
+/* ANIMATION */
+.menu-btn.open .menu-btn__burger {
+  transform: translatex(-50px);
+  background: transparent; }
+
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px); }
+
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px); }
 
 .attribution {
   grid-row: 6 / 8;
