@@ -107,6 +107,7 @@ body {
     grid-column: 1 / -1;
     grid-row: 1 / 1;
     min-height: 60vh;
+    position: relative;
   }
 
 
@@ -127,7 +128,7 @@ body {
       justify-content: center;
       width: 100%;
     }
-  
+
 
 
 
@@ -172,8 +173,9 @@ body {
     width: 80%;
     grid-column: 1/ -1;
     grid-row: 2 / 3;
-
     
+
+
 
   }
 
@@ -249,7 +251,35 @@ body {
       display: none;
     }
 
+
+
   }
+
+  &__btn-scroll--left-mob,
+  &__btn-scroll--right-mob {
+
+
+
+    @media only screen and (max-width: $bp-large) {
+      
+      grid-row: 2 / 3;
+      height: 75px;
+      width: 110px;
+      background-color: $color-black;
+      border: 0;
+      cursor: pointer;
+      transition: transform 1s ease;
+      @include transition-basic;
+
+      &:hover {
+        background-color: $color-very-dark-gray;
+      }
+    }
+
+
+  }
+
+
 
   &__btn-scroll--right {
 
@@ -274,6 +304,17 @@ body {
   display: flex;
 
   grid-row: 2 / 3;
+
+
+  @media only screen and (max-width: $bp-large) {
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+
+
 }
 
 
@@ -330,7 +371,7 @@ body {
 
   @media only screen and (max-width: $bp-large) {
 
-    
+
     grid-column: 1 / -1;
     grid-row: 4 / 5;
   }
@@ -358,15 +399,18 @@ body {
     @media only screen and (max-width: $bp-large) {
 
       width: 90%;
-    
-  }
 
-  
+    }
+
+
   }
 }
 
+//MOBILE
+
 .mobile-nav {
   display: none;
+
   @media only screen and (max-width: $bp-large) {
     display: block;
     position: fixed;
@@ -374,25 +418,33 @@ body {
     left: 5%;
     top: 5%;
     z-index: 6;
-}
-
-.line {
-  width: 30px;
-  height: 3px;
-  background: white;
-  margin: 5px;
-  
-}
   }
 
+  .line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+
+  }
+}
+
+.scroll-btn-mobile-container {
+  
+
+  @media only screen and (max-width: $bp-large) {
+    grid-column: 10 / -1;
+    grid-row: 1 / 1;
+    z-index: 999;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
 
 
 
-// .furniture {
-//   grid-column: 2 / -1;
-//   grid-row: 2 / 2;
-//   background-color: red;
-// }
 
 
 
