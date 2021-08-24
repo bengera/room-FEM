@@ -125,8 +125,8 @@ body {
       width: 100px;
       margin-left: 19rem;
 
-      
-      
+
+
     }
 
   }
@@ -137,7 +137,7 @@ body {
     &:hover {
       border-bottom: 2px solid $color-white;
 
-      
+
 
 
     }
@@ -172,7 +172,7 @@ body {
     width: 80%;
     grid-column: 1/ -1;
     grid-row: 2 / 3;
-    
+
 
 
 
@@ -260,7 +260,7 @@ body {
 
 
     @media only screen and (max-width: $bp-large) {
-      
+
       grid-row: 2 / 3;
       height: 75px;
       width: 110px;
@@ -408,8 +408,9 @@ body {
 
 
 .scroll-btn-mobile-container {
-  
+
   display: none;
+
   @media only screen and (max-width: $bp-large) {
     grid-column: 10 / -1;
     grid-row: 1 / 1;
@@ -418,65 +419,79 @@ body {
     position: absolute;
     bottom: 0;
     right: 0;
-    
-    
+
+
   }
 }
 
 .menu-btn {
-  
+
   @media only screen and (max-width: $bp-large) {
-    
+
     position: absolute;
     // position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     cursor: pointer;
     transition: all .5s ease-in-out;
     top: 13%;
     left: 5%;
-    z-index:2000;
-    
-    
-    
+    z-index: 2000;
+
+
+
     &__burger {
       width: 40px;
       height: 4px;
       background: #fff;
       border-radius: 5px;
       transition: all .5s ease-in-out;
-      
+
       &:before,
-      &:after
-      {
-       content: '';
-      position: absolute;
-      width: 40px;
-      height: 3.5px;
-      background: #fff;
-      border-radius: 5px;
-      transition: all .5s ease-in-out; 
-      
+      &:after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 3.5px;
+        background: #fff;
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+
       }
-      
+
       &:before {
         transform: translateY(-16px);
         top: 4px;
       }
-      
+
       &:after {
         transform: translateY(16px);
         top: -4px;
       }
-      
-      
+
+
     }
   }
 
-  
+
 }
+
+.menu-btn__burger.navigation-open {
+
+  @media only screen and (max-width: $bp-large) {
+
+    &:before,
+    &:after {
+      width: 30px;
+    }
+
+    }
+  }
+
+
+
 
 /*MENU OPEN NAV*/
 /*****************************/
@@ -493,21 +508,26 @@ body {
 .navigation__list.navigation-open {
   width: 100%;
   padding: 2rem;
-  // margin-top: 2.6rem;
-  margin-top: 4rem;
+  // margin-top: 4rem;
+  margin-top: 0rem;
+  height: 75px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
   background-color: #FFF;
   color: #000;
   margin-left: 2.2rem;
   justify-content: space-around;
- 
+
 }
 
 
 
-.logo.navigation-open {
-  display:none;
-  
-}
+// .logo.navigation-open {
+//   display:none;
+
+// }
 
 
 /*****************************/
@@ -516,17 +536,19 @@ body {
 
 /* ANIMATION */
 .menu-btn.open .menu-btn__burger {
-  transform: translatex(-50px);
+  transform: translatex(-48px);
   background: transparent;
-  
+
 }
 
 .menu-btn.open .menu-btn__burger::before {
-  transform: rotate(45deg) translate(35px, -41px);
+  transform: rotate(45deg) translate(35px, -42px);
+  background-color: $color-dark-gray;
 }
 
 .menu-btn.open .menu-btn__burger::after {
   transform: rotate(-45deg) translate(35px, 39px);
+  background-color: $color-dark-gray;
 }
 
 
