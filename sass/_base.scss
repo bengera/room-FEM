@@ -153,6 +153,16 @@ body {
 
 }
 
+li.navigation__item:nth-child(2) {
+
+  @media only screen and (max-width: $bp-large) {
+
+    margin-left: 2.2rem;
+  }
+
+
+}
+
 
 
 .t-content {
@@ -487,8 +497,8 @@ body {
       width: 30px;
     }
 
-    }
   }
+}
 
 
 
