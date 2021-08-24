@@ -110,10 +110,6 @@ body {
     position: relative;
   }
 
-
-
-
-
   &__list {
     list-style: none;
     display: flex;
@@ -128,13 +124,10 @@ body {
       justify-content: center;
       width: 100px;
       margin-left: 19rem;
+
+      
       
     }
-
-
-
-
-
 
   }
 
@@ -143,6 +136,8 @@ body {
 
     &:hover {
       border-bottom: 2px solid $color-white;
+
+      
 
 
     }
@@ -157,6 +152,8 @@ body {
 
 
 }
+
+
 
 .t-content {
 
@@ -408,28 +405,7 @@ body {
   }
 }
 
-//MOBILE
 
-// .mobile-nav {
-//   display: none;
-
-//   @media only screen and (max-width: $bp-large) {
-//     display: block;
-//     position: fixed;
-//     cursor: pointer;
-//     left: 5%;
-//     top: 5%;
-//     z-index: 6;
-//   }
-
-//   .line {
-//     width: 30px;
-//     height: 3px;
-//     background: white;
-//     margin: 5px;
-
-//   }
-// }
 
 .scroll-btn-mobile-container {
   
@@ -461,11 +437,13 @@ body {
     transition: all .5s ease-in-out;
     top: 13%;
     left: 5%;
+    z-index:2000;
+    
     
     
     &__burger {
       width: 40px;
-      height: 6px;
+      height: 4px;
       background: #fff;
       border-radius: 5px;
       transition: all .5s ease-in-out;
@@ -476,18 +454,21 @@ body {
        content: '';
       position: absolute;
       width: 40px;
-      height: 6px;
+      height: 3.5px;
       background: #fff;
       border-radius: 5px;
       transition: all .5s ease-in-out; 
+      
       }
       
       &:before {
         transform: translateY(-16px);
+        top: 4px;
       }
       
       &:after {
         transform: translateY(16px);
+        top: -4px;
       }
       
       
@@ -497,6 +478,42 @@ body {
   
 }
 
+/*MENU OPEN NAV*/
+/*****************************/
+/*****************************/
+
+
+.navigation__item.navigation-open {
+  display: block;
+  background-color: #FFF;
+  padding: 2rem;
+  color: #000;
+}
+
+.navigation__list.navigation-open {
+  width: 100%;
+  padding: 2rem;
+  // margin-top: 2.6rem;
+  margin-top: 4rem;
+  background-color: #FFF;
+  color: #000;
+  margin-left: 2.2rem;
+  justify-content: space-around;
+ 
+}
+
+
+
+.logo.navigation-open {
+  display:none;
+  
+}
+
+
+/*****************************/
+/*****************************/
+/*****************************/
+
 /* ANIMATION */
 .menu-btn.open .menu-btn__burger {
   transform: translatex(-50px);
@@ -505,11 +522,11 @@ body {
 }
 
 .menu-btn.open .menu-btn__burger::before {
-  transform: rotate(45deg) translate(35px, -35px);
+  transform: rotate(45deg) translate(35px, -41px);
 }
 
 .menu-btn.open .menu-btn__burger::after {
-  transform: rotate(-45deg) translate(35px, 35px);
+  transform: rotate(-45deg) translate(35px, 39px);
 }
 
 
